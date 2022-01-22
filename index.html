@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function computerPlay(){
+            let choice = Math.floor((Math.random()*3)+1);
+            
+            console.log(choice);
+            
+            if (choice == 1){ 
+                choice = 'Rock';
+            }else if(choice == 2){
+                choice = 'Paper';
+            }else{
+                choice= 'Scissors';
+            }
+            console.log(choice)
+            return choice;
+        }
+         
+       
+        
+        
+       function playRound(playerSelection,computerSelection){          
+        endMessage =''
+            if (playerSelection === computerSelection){
+                endMessage = `Tie! ${playerSelection} and ${computerSelection}`;
+            }else if(playerSelection=='Rock'){
+                if (computerSelection == 'Paper'){
+                    endMessage = 'You lose! Paper beats Rock';
+                }else{
+                    endMessage = 'You win! Rock beats Scissors.';
+                }
+            }else if(playerSelection== 'Paper'){
+                if(computerSelection == 'Rock'){
+                    endMessage = "You win! Paper beats Rock.";
+                }else{
+                    endMessage = 'You lose! Scissors beat Paper';
+                }
+            }else if(playerSelection == 'Scissors'){
+                if (computerSelection== 'Paper'){
+                    endMessage = 'You win! Scissors beat Paper';
+                }else
+                    endMessage = 'You lose! Rock beats Scissors';
+            }else{ 
+                endMessage = 'Game did not run';
+            }
+            
+            return endMessage
+            }
+
+        const playerSelection ='Paper';
+        const computerSelection = computerPlay();
+
+        console.log(playRound(playerSelection, computerSelection));
+
+       
+        
+       
+        
+
+
+
+    
+    </script>
+</body>
+</html>
