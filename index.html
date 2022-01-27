@@ -77,7 +77,7 @@
 
         
 
-        /* console.log(playRound(playerSelection, computerSelection)); this is my branch! */
+      
 
         const divMessage =document.querySelector(`.displayMessage`);
         const divTotalMessage =document.querySelector(`.totalMessage`);
@@ -102,19 +102,12 @@
                 if ((playerCount < 5) && (computerCount < 5)){ 
                 divTotalMessage.textContent = `Your score ${playerCount} Computer Score ${computerCount}`;
                 }else if ((playerCount >= 5) && (playerCount > computerCount)){
-                    divTotalMessage.textContet = `Player Victorious!`;
+                    divTotalMessage.textContent = `Player Victorious!`;
                 }else if ((computerCount >=5) && (computerCount > playerCount)){
                     divTotalMessage.textContent = 'Computer Victorious!';
                 }
             }
-         /*   if(playerCount > computerCount){
-                console.log("You win the round!");
-            }else if (playerCount < computerCount){
-                console.log("You lost the round!");
-            }else{
-                console.log("Tie game!");
-            }
-        } */
+       
         function gameRock(){
              /*  for (let i=0;i<5;i++){ */
                 const playerSelection = `Rock`;
@@ -129,10 +122,11 @@
                 }else{
                     computerCount = computerCount +0;
                 }
+                
                 if ((playerCount < 5) && (computerCount < 5)){ 
                 divTotalMessage.textContent = `Your score ${playerCount} Computer Score ${computerCount}`;
                 }else if ((playerCount >= 5) && (playerCount > computerCount)){
-                    divTotalMessage.textContet = `Player Victorious!`;
+                    divTotalMessage.textContent = `Player Victorious!`;
                 }else if ((computerCount >=5) && (computerCount > playerCount)){
                     divTotalMessage.textContent = 'Computer Victorious!';
                 }
@@ -157,7 +151,7 @@
                 if ((playerCount < 5) && (computerCount < 5)){ 
                 divTotalMessage.textContent = `Your score ${playerCount} Computer Score ${computerCount}`;
                 }else if ((playerCount >= 5) && (playerCount > computerCount)){
-                    divTotalMessage.textContet = `Player Victorious!`;
+                    divTotalMessage.textContent = `Player Victorious!`;
                 }else if ((computerCount >=5) && (computerCount > playerCount)){
                     divTotalMessage.textContent = 'Computer Victorious!';
                 }
@@ -174,18 +168,7 @@
     btnP.addEventListener('click',gamePaper);
     btnS.addEventListener('click',gameScissors);
 
-    
-    
-
-    
-    
-    /*console.log(btnR.innerText);
-    console.log(playRound()) */
-      
-    
-
-    /* game(); */
-        
+  
 
 
 
